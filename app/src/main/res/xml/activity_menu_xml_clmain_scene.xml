@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1200">
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/clMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/white" />
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/clLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scaleX="1"
+            android:scaleY="1" />
+        <Constraint
+            android:id="@+id/clLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scaleX="1"
+            android:scaleY="1" />
+        <Constraint
+            android:id="@+id/clLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scaleX="1"
+            android:scaleY="1" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/clMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="#7576E2" />
+
+        </Constraint>
+        <Constraint
+            android:id="@+id/clLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66ffffff"
+            android:rotation="7"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:translationX="150dp" />
+        <Constraint
+            android:id="@+id/clLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99ffffff"
+            android:rotation="7"
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            android:translationX="175dp" />
+        <Constraint
+            android:id="@+id/clLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:rotation="7"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:translationX="200dp" />
+
+    </ConstraintSet>
+</MotionScene>

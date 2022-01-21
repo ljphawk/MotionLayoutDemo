@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="500">
+
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/tv_pick_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:text="Top to pick your card"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent" />
+
+
+        <Constraint
+            android:id="@+id/ll_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:scaleX="0"
+            android:scaleY="0"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/tv_pick_hint" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/tv_pick_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:alpha="1"
+            android:text="Top to pick your card"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/tv_fortune" />
+
+
+        <Constraint
+            android:id="@+id/ll_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:scaleX="1"
+            android:scaleY="1"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/tv_pick_hint" />
+
+    </ConstraintSet>
+
+
+</MotionScene>
